@@ -36,4 +36,44 @@ class DucksTest
         blankDuck.setAge(5);
         assertEquals(expected, blankDuck.getAge());
     }
+
+    @Test
+    void babySaysPeep()
+    {
+        Ducks babyDuck = new Ducks("white", 1);
+        String expected = "peep";
+        assertEquals(expected, babyDuck.speak());
+    }
+
+    @Test
+    void adultSaysQuack()
+    {
+        Ducks adultDuck = new Ducks("white", 5);
+        String expected = "quack";
+        assertEquals(expected, adultDuck.speak());
+    }
+
+    @Test
+    void fourYOSaysPeep()
+    {
+        Ducks babyDuck = new Ducks("white", 4);
+        String expected = "peep";
+        assertEquals(expected, babyDuck.speak());
+    }
+
+    @Test
+    void deadDuckSaysCroak()
+    {
+        Ducks deadDuck = new Ducks("white", 100);
+        String expected = "croak";
+        assertEquals(expected, deadDuck.speak());
+    }
+
+    @Test
+    void fourtyYOSaysCroak()
+    {
+        Ducks deadDuck = new Ducks("white", 40);
+        String expected = "croak";
+        assertEquals(expected, deadDuck.speak());
+    }
 }

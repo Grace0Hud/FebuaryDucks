@@ -30,6 +30,22 @@ public class Ducks
         this.age = age;
     }
 
+    public String speak()
+    {
+        String output = "";
+        if(age < 5)
+        {
+            output = "peep";
+        }else if(age > 39)
+        {
+            output = "croak";
+        }
+        else
+        {
+            output = "quack";
+        }
+        return output;
+    }
     @Override
     public String toString()
     {
