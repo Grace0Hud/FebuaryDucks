@@ -76,4 +76,12 @@ class DucksTest
         String expected = "croak";
         assertEquals(expected, deadDuck.speak());
     }
+
+    @Test
+    void negativeAge()
+    {
+        Ducks negDuck = new Ducks("white", -3);
+        String expected = "peep";
+        assertEquals(expected, negDuck.speak());
+    }
 }

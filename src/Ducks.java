@@ -11,7 +11,7 @@ public class Ducks
     public Ducks(String color, int age)
     {
         this.color = color;
-        this.age = age;
+        this.age = checkAge(age);
     }
 
     public String getColor() {
@@ -27,7 +27,7 @@ public class Ducks
     }
 
     public void setAge(int age) {
-        this.age = age;
+        this.age = checkAge(age);
     }
 
     public String speak()
@@ -45,6 +45,15 @@ public class Ducks
             output = "quack";
         }
         return output;
+    }
+
+    public int checkAge(int age)
+    {
+        if(age > 0)
+        {
+            return age;
+        }
+        return 1;
     }
     @Override
     public String toString()
