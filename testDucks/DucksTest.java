@@ -19,4 +19,12 @@ class DucksTest
         assertEquals(expected, blankDuck.toString());
     }
 
+    @Test
+    void colorGetNSet()
+    {
+        Ducks blankDuck = new Ducks();
+        String expected = "yellow";
+        blankDuck.setColor("yellow");
+        assertEquals(expected, blankDuck.getColor());
+    }
 }
