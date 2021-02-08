@@ -11,4 +11,12 @@ class DucksTest
         String expected = "Duck: \nColor = white\nAge = 2";
         assertEquals(expected, duck1.toString());
     }
+    @Test
+    void defaultConstr()
+    {
+        Ducks blankDuck = new Ducks();
+        String expected = "Duck: \nColor = \nAge = 0";
+        assertEquals(expected, blankDuck.toString());
+    }
+
 }
