@@ -27,4 +27,13 @@ class DucksTest
         blankDuck.setColor("yellow");
         assertEquals(expected, blankDuck.getColor());
     }
+
+    @Test
+    void ageGetNSet()
+    {
+        Ducks blankDuck = new Ducks();
+        int expected = 5;
+        blankDuck.setAge(5);
+        assertEquals(expected, blankDuck.getAge());
+    }
 }
