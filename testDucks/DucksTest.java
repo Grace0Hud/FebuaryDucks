@@ -20,6 +20,13 @@ class DucksTest
     }
 
     @Test
+    void costrNegDuck()
+    {
+        Ducks blankDuck = new Ducks("white", -1);
+        String expected = "Duck: \nColor = white\nAge = 1";
+        assertEquals(expected, blankDuck.toString());
+    }
+    @Test
     void colorGetNSet()
     {
         Ducks blankDuck = new Ducks();
@@ -34,6 +41,15 @@ class DucksTest
         Ducks blankDuck = new Ducks();
         int expected = 5;
         blankDuck.setAge(5);
+        assertEquals(expected, blankDuck.getAge());
+    }
+
+    @Test
+    void negAgeSet()
+    {
+        Ducks blankDuck = new Ducks();
+        int expected = 1;
+        blankDuck.setAge(-10);
         assertEquals(expected, blankDuck.getAge());
     }
 

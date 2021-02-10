@@ -47,7 +47,7 @@ public class Ducks
         return output;
     }
 
-    public int checkAge(int age)
+    private int checkAge(int age)
     {
         if(age > 0)
         {
